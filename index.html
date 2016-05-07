@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>paperRockScissors</title>
+</head>
+<body>
+<div class="header">Paper Rock Scissors</div>
+	<!-- timer -->
+<!-- <div>
+    <h1>Countdown</h1>
+    <span id="cd_h">00</span>:
+    <span id="cd_m">00</span>:
+    <span id="cd_s">00</span>:
+    <span id="cd_ms">00</span>
+    <br/>
+    <br/>
+    <input type="button" value="Start" id="cd_start" />
+    <input type="button" value="Pause" id="cd_pause" />
+    <input type="button" value="Stop"  id="cd_stop" />
+    <input type="button" value="Reset" id="cd_reset" />
+    <br/>
+    <br/>
+    <input type="text" value="" id="cd_seconds" />
+    secs
+    <br/>
+    <br/>
+    <span id="cd_status">Idle</span>
+</div> -->
+<input type="text" value="Enter minutes" id="min"/>
+<input type="text" value="Enter seconds" id="sec"/>
+<input type="button" value="start" onClick="countdown()"/>
+<div><span>__________</span></div>
+<form action="#" method="post">
+Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
+<input type="button" id="btnct" value="START" /> 
+<input type="button" id="btnct_res" value="RESTART" /> 
+<input type="button" id="btnct_end" value="END" />
+</form>
+Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span>
+
+<div id="gameWrap" class="clearfix">
+  <h1 id="mainHeading">Rock, Paper, Scissors</h1>
+  <h2 id="msgHeading">Who will be the winner?</h2>
+  <div id="userWrap">
+      <label for="userInput" id="userInputLbl">Enter Your Choice</label>
+      <input type="text" name="userInput" id="userInput" />
+  </div>
+  <div id="cpuWrap">
+    <label for="cpuResult" id="cpuResultLbl">The Robot Chooses
+    <span id="cpuResult"></span>
+  </div>
+  <button id="goBtn">GO!</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
+
