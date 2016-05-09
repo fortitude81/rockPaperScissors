@@ -1,34 +1,13 @@
 <html>
 <head>
 	<title>paperRockScissors</title>
+	<link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 <body>
 <div class="header">Paper Rock Scissors</div>
 	<!-- timer -->
-<!-- <div>
-    <h1>Countdown</h1>
-    <span id="cd_h">00</span>:
-    <span id="cd_m">00</span>:
-    <span id="cd_s">00</span>:
-    <span id="cd_ms">00</span>
-    <br/>
-    <br/>
-    <input type="button" value="Start" id="cd_start" />
-    <input type="button" value="Pause" id="cd_pause" />
-    <input type="button" value="Stop"  id="cd_stop" />
-    <input type="button" value="Reset" id="cd_reset" />
-    <br/>
-    <br/>
-    <input type="text" value="" id="cd_seconds" />
-    secs
-    <br/>
-    <br/>
-    <span id="cd_status">Idle</span>
-</div> -->
-<input type="text" value="Enter minutes" id="min"/>
-<input type="text" value="Enter seconds" id="sec"/>
-<input type="button" value="start" onClick="countdown()"/>
-<div><span>__________</span></div>
+
+<div id="page-container">
 <form action="#" method="post">
 Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
 <input type="button" id="btnct" value="START" /> 
@@ -37,7 +16,7 @@ Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3"
 </form>
 Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span>
 
-<div id="gameWrap" class="clearfix">
+<!-- <div id="gameWrap" class="clearfix">
   <h1 id="mainHeading">Rock, Paper, Scissors</h1>
   <h2 id="msgHeading">Who will be the winner?</h2>
   <div id="userWrap">
@@ -49,8 +28,49 @@ Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span
     <span id="cpuResult"></span>
   </div>
   <button id="goBtn">GO!</button>
+</div> -->
+<br>
+<div id="you">You chose : </div><br>
+<div id="computer">He chose : </div><br><br>
+<div id="results">results</div><br>
+<button id="rock">rock</button>
+<button id="paper">paper</button>
+<button id="scisors">scissors</button><br>
+<div id="win">win : </div>
+<div id="lose">lose : </div>
+<div id="tie">tie : </div><br<br><br><br><br>
+<div id="score">WITH AN AVERAGE OF :
+  <div id="wons">0</div>
+  <div id="loses">0</div>
+  <div id="ties">0</div>
+  <div id="sum">0</div>
 </div>
+<div id="scorer">Check Average</div><br><br><hr>
+  <div>rules | win : 1 point | ties : 0.5 point | lose : 0 points</div></center>
 
+  <div class="scoreboard">
+		<div class="col-header">
+			<strong>Wins</strong>
+		</div>
+		<div class="col-header">
+			<strong>Losses</strong>
+		</div>
+		<div class="col-header">
+			<strong>Ties</strong>
+		</div>
+		<div class="col-val wins">
+			0
+		</div>
+		<div class="col-val loses">
+			0
+		</div>
+		<div class="col-val ties">
+			0
+		</div>
+	</div>
+
+</div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
 <script src="app.js"></script>
 </body>
 </html>

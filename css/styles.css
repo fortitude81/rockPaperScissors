@@ -1,0 +1,40 @@
+body {
+	background-image:
+    linear-gradient(
+      #b0f4ec, #2a8276
+    );
+     margin: 0 auto;
+     margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -20px;
+}
+
+.header {
+	background-color: blue;
+}
+#page-container {
+	padding: 54px 14px 15px;
+	margin: 0 auto;
+	width: 837px;
+}
+.scoreboard{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 400px;
+}
+
+.scoreboard .col-header, .scoreboard .col-val{
+	display: inline-block;
+	width: 32%;
+	background: #DADFE1;
+	padding: 5px;
+	font-weight: bolder;
+	text-transform: uppercase;
+}
+.scoreboard .col-val{
+	background: none;
+}
