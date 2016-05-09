@@ -1,5 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Doppio+One);
-
+<!-- @import url(http://fonts.googleapis.com/css?family=Doppio+One);
+ -->
 html {
   display: table;
   width: 100%;
@@ -48,54 +48,11 @@ h2 {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
-<!-- .dif-options {
-  clear: both;
-  overflow: hidden;
-  margin: 20px -7px 0;
-}
-.dif-options div {
-  float: left;
-  width: 20%;
-}
-.dif-options input {
-  display: none;
-}
-.dif-options label {
-  display: block;
-  margin: 0 auto;
-  width: 24px;
-  height: 24px;
-  background-color: #666;
-  border: solid 2px #ccc;
-  border-radius: 8px;
-  color: #999;
+
+.sidebar h2 {
   text-align: center;
-  line-height: 24px;
-  cursor: pointer;
 }
-.dif-options input:checked + label {
-  color: #fff;
-  background-color: #593f6b;
-  border-color: #fff;
-  cursor: default;
-}
-.freeze .dif-options input:not(:checked) + label {
-  font-size: 0;
-  margin: 7px auto; -->
-  <!-- width: 10px;
-  height: 10px;
-  border-radius: 4px;
-  color: transparent;
-  line-height: 10px;
-  cursor: default;
-  transition: .2s;
-} -->
-.start {
-  margin-top: 20px;
-}
-.freeze .start {
-  display: none;
-}
+
 #btnct {
   display: block;
   width: 100%;
@@ -143,23 +100,11 @@ h2 {
 }
 
 
-
-
-
-@keyframes bounce {
-  0% { animation-timing-function: ease-out; transform: translateY(0); }
-  30% { animation-timing-function: ease-in; transform: translateY(-40px); }
-  60% { animation-timing-function: ease-out; transform: translateY(0); }
-  80% { animation-timing-function: ease-in; transform: translateY(-10px); }
-  100% { animation-timing-function: ease-out; transform: translateY(0); }
-}
-
-/////
 .button-row {
   text-align: center;
   margin: 0px auto;
  } 
-.button {
+button {
   transition: box-shadow 0.3s;
   font-size: 24px;
   padding: 20px 25px;
@@ -172,4 +117,14 @@ h2 {
 
 .panel-info {
   text-align: center;
+}
+
+.results {
+  font-size: 40px;
+  color: white;
+}
+
+.header h1 {
+  text-align: center;
+  
 }

@@ -3,17 +3,20 @@
   <title></title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
+
 <body>
 
   <div class="wrapper">
+    <div class="header"><h1>Paper Rock Scissors</h1></div>
     <div class="content">
       
       <div class="sidebar">
         
         <div class="panel dif">
           <h2>Timer</h2>
+          <br>
           <form action="#" method="post">
-            Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
+            Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/><br/>
             <input type="button" id="btnct" value="START" /> 
             <input type="button" id="btnct_res" value="RESTART" /> 
             <input type="button" id="btnct_end" value="END" />
@@ -37,9 +40,12 @@
       <button id="paper">paper</button>
       <button id="scisors">scissors</button><br>
       </div>
+      <br>
+      <br>
       <div class="results">
-        <div id="you">You chose : </div><br>
-        <div id="computer">He chose : </div><br><br>
+        <div id="you">You Chose : </div><br>
+        <div id="computer">Bot Chose : </div><br><br>
+        <div id="results">Results:</div><br>
       </div>
       <!-- <div class="button-row">
     <button class="rock btn">Rock</button>

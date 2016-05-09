@@ -1,9 +1,5 @@
-
-
-
-
 function CountdownTimer(obnm){
- // http://coursesweb.net/javascript/
+ 
   var endct =0;  // it is set to 1 when script starts
   var ctmnts =0;  // minutes
   var ctsecs =0;  // seconds
@@ -30,18 +26,20 @@ function CountdownTimer(obnm){
       else el_btnct.value ='RESUME';
     }
   }
-
-  // HERE YOU CAN ADD TO EXECUTE JavaScript instructions WHEN COUNTDOWN TIMER REACHES TO 0
+  ///alet results after time expires
   function endCT(){
-    // HERE ADD YOUR CODE
-
-    return false;
-  }
+    if ('#scorer'.winning > '#scorer'.losing){
+      alert("you won");
+      }else{
+        alert("you lost");
+      }
+    };
+  
 
   this.countdownTimer = function(){
     // if $startchr is 0, and form fields exists, gets data for minutes and seconds, and sets $startchr to 1
     if(startchr == 0 && el_mns && el_scs) {
-      // makes sure the script uses integer numbers
+      // convert to integer numbers
       ctmnts = parseInt(el_mns.value);
       ctsecs = parseInt(el_scs.value);
 
@@ -121,27 +119,28 @@ var rand =Math.floor(Math.random()*3)+1
       summ++,
       $("#sum").text(summ+" games")
     if(rand==1){
-      $("#computer").text("Computer chose : rocks"),
+      $("#computer").text("Bot chose : rocks"),
       $("#results").text("it's a tie"),
         tie++,//increases value onclick
         $("#tie").text("tie : "+tie),
         $("#ties").text(tie);
     }//if rand = 1 i.e rock it's a tie
     else if(rand==2){
-      $("#computer").text("Computer chose : paper"),
+      $("#computer").text("Bot chose : paper"),
       $("#results").text("you lose"),
         lose++,//increases value onclick
         $("#lose").text("lose : "+lose),
         $("#loses").text(lose);
     }//if rand = 2 i.e paper user loses
     else{
-      $("#computer").text("Computer chose : scissors"),
+      $("#computer").text("Bot chose : scissors"),
       $("#results").text("you win"),
         win++,//increases value onclick
         $("#win").text("win : "+win),
         $("#wons").text(win);
-    }//if rand = 3 i.e scissors user wins
-  });//end of rock button click
+    }
+  });
+
   $("#paper").click(function(){
     var winning =$("#wons").text();
     var losing = $("#loses").text();
@@ -155,21 +154,21 @@ var rand1 =Math.floor(Math.random()*3)+1;
       summ++,
       $("#sum").text(summ+" games")
     if(rand1==1){
-      $("#computer").text("Computer chose : rocks"),
+      $("#computer").text("Bot chose : rocks"),
       $("#results").text("you win"),
         win++,//increases value onclick
         $("#win").text("win : "+win),
         $("#wons").text(win);
     }//if rand = 1 i.e rock user wins
     else if(rand1==2){
-      $("#computer").text("Computer chose : paper"),
+      $("#computer").text("Bot chose : paper"),
       $("#results").text("it's a tie"),
         tie++,//increases value onclick
         $("#tie").text("tie : "+tie),
         $("#ties").text(tie);
     }//if rand = 2 i.e paper it's a tie
     else{
-      $("#computer").text("Computer chose : scissors"),
+      $("#computer").text("Bot chose : scissors"),
       $("#results").text("you lose"),
         lose++,//increases value onclick
         $("#lose").text("lose : "+lose),
@@ -189,21 +188,21 @@ var rand2 =Math.floor(Math.random()*3)+1;
       summ++,
       $("#sum").text(summ+" games")
     if(rand2==1){
-      $("#computer").text("Computer chose : rocks"),
+      $("#computer").text("Bot chose : rocks"),
       $("#results").text("you lose"),
         lose++,//increases value onclick
         $("#lose").text("lose : "+lose),
         $("#loses").text(lose);
     }//if rand = 1 i.e rock user loses
     else if(rand2==2){
-      $("#computer").text("Computer chose : paper"),
+      $("#computer").text("Bot chose : paper"),
       $("#results").text("you win"),
         win++,//increases value onclick
         $("#win").text("win : "+win),
         $("#wons").text(win);
     }//if rand = 2 i.e paper user wins
     else{
-      $("#computer").text("Computer chose : scissors"),
+      $("#computer").text("Bot chose : scissors"),
       $("#results").text("it's a tie"),
         tie++,//increases value onclick
         $("#tie").text("tie : "+tie),
@@ -218,61 +217,20 @@ var rand2 =Math.floor(Math.random()*3)+1;
     var twowinning = winning*1;
     var twolosing = losing/2;
     var tyings = tying/2; 
-    $("#scorer").text((twowinning+tyings) + " / " + $("#sum").text())//calculates the average 
-  });//end of change function
+  });
   $("h1").click(function(){
     $(this).text("the game is below not ME !!")
   });
-});//end of query
+});
 
-// document.getElementById('goBtn').onclick = function runTheMagic() {  
-//   var userInput = document.getElementById('userInput').value,
-//       cpuResult = document.getElementById('cpuResult'),
-//       msgHeading = document.getElementById('msgHeading'),
-//       randomize = Math.random() * 100,
-//       cpuChoice;
-  
-//   if (userInput === "Rock" || userInput === "Paper" || userInput === "Scissors") {
-//     if (randomize > 0 && randomize < 33) {
-//       cpuChoice = "Rock";
-//     } else if(randomize >=34 && randomize < 66) {
-//       cpuChoice = "Paper";
-//     } else {
-//       cpuChoice = "Scissors";
-//     } 
-
-//     cpuResult.innerHTML = cpuChoice;
-
-//     if (userInput === cpuChoice) {
-//       msgHeading.innerHTML = "It's a Tie. Try Again!";
-//     }
-
-//     if (userInput === "Rock" && cpuChoice === "Paper") {
-//       msgHeading.innerHTML = "Paper covers Rock. You Loose!";
-//     } else if (userInput === "Rock" && cpuChoice === "Scissors") {
-//       msgHeading.innerHTML = "Rock crushes scissors. You Win!";
-//       msgHeading.style.color = "green";
-//     }
-
-//     if (userInput === "Paper" && cpuChoice === "Rock") {
-//       msgHeading.innerHTML = "Paper covers Rock. You Win!";
-//       msgHeading.style.color = "green";
-//     } else if (userInput === "Paper" && cpuChoice === "Scissors") {
-//       msgHeading.innerHTML = "Scissors cut Paper. You Loose!";
-//     }
-
-//     if (userInput === "Scissors" && cpuChoice === "Rock") {
-//       msgHeading.innerHTML = "Rock crushes Scissors. You Loose!";
-//     } else if (userInput === "Scissors" && cpuChoice === "Paper") {
-//       msgHeading.innerHTML = "Scissors cut Paper. You Win!";
-//       msgHeading.style.color = "green";
-//     }
-//   } else {
-//     msgHeading.style.color = "red";
-//     msgHeading.innerHTML = "Please enter Rock, Paper or Scissors";
-//     return false;
-//   }
-// };
+// $('#el_btnct_res').click(function() {
+//   playerWin = 0;
+//   $('#wons').html(playerWin);
+//   draws = 0;
+//   $('#ties').html(draws);
+//   aiWin = 0;
+//   $('#loses').html(aiWin);
+// });
 
 
 
