@@ -27,10 +27,11 @@ function CountdownTimer(obnm){
     }
   }
   ///alet results after time expires
+  //not accurate due to closure
   function endCT(){
-    if ('#scorer'.winning > '#scorer'.losing){
+    if (win > lose){
       alert("you won");
-      }else{
+    }else{
         alert("you lost");
       }
     };
@@ -97,9 +98,7 @@ function CountdownTimer(obnm){
 //set object of CountdownTimer class
 var obCT = new CountdownTimer('obCT');
 
-
-
-////rock paper scissors /////////////////
+//game logic
 
 $(document).ready(function(){
   var win = 0;//sets value of won to 0
@@ -222,15 +221,15 @@ var rand2 =Math.floor(Math.random()*3)+1;
     $(this).text("the game is below not ME !!")
   });
 });
-
-// $('#el_btnct_res').click(function() {
-//   playerWin = 0;
-//   $('#wons').html(playerWin);
-//   draws = 0;
-//   $('#ties').html(draws);
-//   aiWin = 0;
-//   $('#loses').html(aiWin);
-// });
+//reset score
+$('#btnct_res').click(function() {
+  win = 0;
+  $('#win').text("win : " +win);
+  tie = 0;
+  $('#tie').text("tie : " +tie);
+  lose = 0;
+  $('#lose').text("lose : " +lose);
+});
 
 
 
