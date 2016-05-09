@@ -1,78 +1,131 @@
 <html>
 <head>
-	<title>paperRockScissors</title>
-	<link rel="stylesheet" href="css/styles.css" type="text/css" />
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-<div class="header">Paper Rock Scissors</div>
-	<!-- timer -->
 
-<div id="page-container">
-<form action="#" method="post">
-Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
-<input type="button" id="btnct" value="START" /> 
-<input type="button" id="btnct_res" value="RESTART" /> 
-<input type="button" id="btnct_end" value="END" />
-</form>
-Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span>
-
-<!-- <div id="gameWrap" class="clearfix">
-  <h1 id="mainHeading">Rock, Paper, Scissors</h1>
-  <h2 id="msgHeading">Who will be the winner?</h2>
-  <div id="userWrap">
-      <label for="userInput" id="userInputLbl">Enter Your Choice</label>
-      <input type="text" name="userInput" id="userInput" />
+  <div class="wrapper">
+    <div class="content">
+      
+      <div class="sidebar">
+        
+        <div class="panel dif">
+          <h2>Timer</h2>
+          <form action="#" method="post">
+            Minutes: <input type="text" id="mns" name="mns" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; Seconds: <input type="text" id="scs" name="scs" value="0" size="2" maxlength="2" /><br/>
+            <input type="button" id="btnct" value="START" /> 
+            <input type="button" id="btnct_res" value="RESTART" /> 
+            <input type="button" id="btnct_end" value="END" />
+          </form>
+          Countdown Timer: &nbsp; <span id="showmns">00</span>:<span id="showscs">00</span>
+          <!-- <div class="start">
+            <button>Start Game</button>
+          </div> -->
+        </div>
+        <div class="panel info">
+          <h2>Record</h2>
+          <div id="win">win : </div>
+          <div id="lose">lose : </div>
+          <div id="tie">tie : </div>
+          <div class="blurb"></div>
+          <div class="outlook"></div>
+        </div>
+      </div>
+      <div class="button-row">
+      <button id="rock">rock</button>
+      <button id="paper">paper</button>
+      <button id="scisors">scissors</button><br>
+      </div>
+      <div class="results">
+        <div id="you">You chose : </div><br>
+        <div id="computer">He chose : </div><br><br>
+      </div>
+      <!-- <div class="button-row">
+    <button class="rock btn">Rock</button>
+    <button class="paper btn">Paper</button>
+    <button class="scissors btn">Scissors</button>
+    </div> -->
   </div>
-  <div id="cpuWrap">
-    <label for="cpuResult" id="cpuResultLbl">The Robot Chooses
-    <span id="cpuResult"></span>
+    
   </div>
-  <button id="goBtn">GO!</button>
-</div> -->
-<br>
-<div id="you">You chose : </div><br>
-<div id="computer">He chose : </div><br><br>
-<div id="results">results</div><br>
-<button id="rock">rock</button>
-<button id="paper">paper</button>
-<button id="scisors">scissors</button><br>
-<div id="win">win : </div>
-<div id="lose">lose : </div>
-<div id="tie">tie : </div><br<br><br><br><br>
-<div id="score">WITH AN AVERAGE OF :
-  <div id="wons">0</div>
-  <div id="loses">0</div>
-  <div id="ties">0</div>
-  <div id="sum">0</div>
-</div>
-<div id="scorer">Check Average</div><br><br><hr>
-  <div>rules | win : 1 point | ties : 0.5 point | lose : 0 points</div></center>
 
-  <div class="scoreboard">
-		<div class="col-header">
-			<strong>Wins</strong>
-		</div>
-		<div class="col-header">
-			<strong>Losses</strong>
-		</div>
-		<div class="col-header">
-			<strong>Ties</strong>
-		</div>
-		<div class="col-val wins">
-			0
-		</div>
-		<div class="col-val loses">
-			0
-		</div>
-		<div class="col-val ties">
-			0
-		</div>
-	</div>
-
-</div>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
-<script src="app.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>  
+  <script src="app.js"></script>
 </body>
 </html>
 
 
+<!-- <html>
+  <head>
+    <title>Tic Tac Toe</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  
+  <body class='blackBackground'>
+    
+    <div class='container'>
+      
+      <div class='jumbotron'>
+        <h1 class='text-center'>Tic Tac Toe</h1>
+        <h3 class='text-primary text-center'>Created by Moehammered</h3>
+        <h4 class='text-muted text-center'> ( Proud of it too :D ) </h4>
+      </div> -->
+      <!-- Game section of page -->
+      <!-- <div id='gameSection' class='row well'>
+        <!-- The board area -->
+        <!-- <div id='boardArea' class='col-lg-4 col-md-4 col-sm-6 col-xs-12 well'>
+          <center> -->
+            <!-- top row -->
+            <!-- <div class='row'>
+              <button id='tile0' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile1' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile2' type='button' class='btn btn-primary gameTile'></button>
+            </div>
+            <!-- middle row -->
+            <!-- <div class='row'>
+              <button id='tile3' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile4' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile5' type='button' class='btn btn-primary gameTile'></button>
+            </div> -->
+            <!-- bottom row -->
+            <!-- <div class='row'>
+              <button id='tile6' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile7' type='button' class='btn btn-primary gameTile'></button>
+              <button id='tile8' type='button' class='btn btn-primary gameTile'></button>
+            </div>
+          </center>
+        </div> --> -->
+        
+        <!-- <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+          <center>
+            <h2 id='statusText'>Ready To Play</h2>
+            <div class='row'>
+              <button id='startBtn' type='button' class='btn btn-success'>Start</button>
+              <button id='stopBtn' type='button' class='btn btn-danger disabled'>Stop</button>
+            </div>
+            <div class='row'>
+              <h3>Select Player Token</h3>
+              <button id='crossBtn' type='button' class='btn btn-success'>X</button>
+              <button id='noughtBtn' type='button' class='btn btn-default'>O</button>
+            </div>
+          </center>
+        </div>
+        
+        <div class='col-lg-4 col-md-4 col-sm-4 col-xs-12'>
+          <center>
+            <h3>Difficulty</h3>
+            <div class='row'>
+              <button id='easyBtn' type='button' class='btn btn-success'>Easy</button>
+              <button id='medBtn' type='button' class='btn btn-default'>Medium</button>
+              <button id='hardBtn' type='button' class='btn btn-default'>Hard</button>
+            </div>
+          </center>
+        </div>
+      </div>
+      
+    </div>
+    
+  </body> -->
+<!-- </html> --> -->
