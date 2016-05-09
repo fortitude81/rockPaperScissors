@@ -1,5 +1,3 @@
-<!-- @import url(http://fonts.googleapis.com/css?family=Doppio+One);
- -->
 html {
   display: table;
   width: 100%;
@@ -99,11 +97,11 @@ h2 {
   margin-top: 10px;
 }
 
-
 .button-row {
   text-align: center;
   margin: 0px auto;
  } 
+
 button {
   transition: box-shadow 0.3s;
   font-size: 24px;
@@ -126,5 +124,4 @@ button {
 
 .header h1 {
   text-align: center;
-  
 }
